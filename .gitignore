@@ -4,6 +4,7 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
+.idea/sonarlint/issuestore/index.pb
 .idea/checkstyle-idea.xml
 .idea/codeStyles/
 .idea/encodings.xml
