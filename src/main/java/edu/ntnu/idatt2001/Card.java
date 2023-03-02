@@ -1,9 +1,13 @@
 package edu.ntnu.idatt2001;
 
-public class PlayingCard {
-
-  private final char suit; // 'S'=spade, 'H'=heart, 'D'=diamonds, 'C'=clubs
-  private final int face; // a number between 1 and 13
+/**
+ * A class representing a card.
+ * A card has fields such as suit and face.
+ *
+ */
+public class Card {
+  private final Suits suit; // The suit of the card e.g "SPADES" (enum)
+  private final Faces face; // The face value of the card, an integer between 1 and 13 (enum)
 
   /**
    * Creates an instance of a PlayingCard with a given suit and face.
@@ -12,7 +16,7 @@ public class PlayingCard {
    *             'H' for Heart, 'D' for Diamonds and 'C' for clubs
    * @param face The face value of the card, an integer between 1 and 13
    */
-  public PlayingCard(char suit, int face) {
+  public Card(Suits suit, Faces face) {
     this.suit = suit;
     this.face = face;
   }
@@ -32,8 +36,8 @@ public class PlayingCard {
    *
    * @return the suit of the card
    */
-  public char getSuit() {
-    return suit;
+  public String getSuit() {
+    return suit.name();
   }
 
   /**
@@ -41,7 +45,7 @@ public class PlayingCard {
    *
    * @return the face of the card
    */
-  public int getFace() {
-    return face;
+  public String getFace() {
+    return face.name();
   }
 }
