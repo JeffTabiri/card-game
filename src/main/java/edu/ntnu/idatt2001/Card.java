@@ -28,7 +28,7 @@ public class Card {
    * @return the suit and face of the card as a string
    */
   public String getAsString() {
-    return String.format("%s%s", suit, face);
+    return String.format("%s%s", suit + " ",face);
   }
 
   /**
