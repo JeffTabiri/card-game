@@ -29,4 +29,13 @@ public class Deck {
   public Card drawCard() {
     return cards.remove(0);
   }
+
+  public void reStack() {
+    cards.clear();
+    for (Suits suit : Suits.values()) {
+      for (Faces face : Faces.values()) {
+        cards.add(new Card(suit, face));
+      }
+    }
+  }
 }
