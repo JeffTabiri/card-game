@@ -43,7 +43,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>src/main/java/edu/ntnu/idatt2001/HelloFX.java</mainClass>
+                    <mainClass>src/main/java/edu/ntnu/idatt2001/Main.java</mainClass>
                 </configuration>
             </plugin>
             <plugin>

@@ -1,5 +1,8 @@
 package edu.ntnu.idatt2001;
 
+import java.net.URI;
+import java.net.URL;
+
 /**
  * A class representing a card.
  * A card has fields such as suit and face.
@@ -8,6 +11,8 @@ package edu.ntnu.idatt2001;
 public class Card {
   private final Suits suit; // The suit of the card e.g "SPADES" (enum)
   private final Faces face; // The face value of the card, an integer between 1 and 13 (enum)
+
+  private String url;
 
   /**
    * Creates an instance of a PlayingCard with a given suit and face.
@@ -19,6 +24,9 @@ public class Card {
   public Card(Suits suit, Faces face) {
     this.suit = suit;
     this.face = face;
+
+    String filename = suit.name() + face.name() + ".png";
+    url = "src/main/resources/PlayingCards" + filename;
   }
 
   /**
@@ -29,6 +37,10 @@ public class Card {
    */
   public String getAsString() {
     return String.format("%s%s", suit + " ",face);
+  }
+
+  public String getUrl() {
+    return url;
   }
 
   /**
