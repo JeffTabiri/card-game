@@ -22,5 +22,16 @@ public class Hand {
     return cards;
   }
 
+  public String cardsToString() {
+
+    String cardsString = "";
+
+    for (Card card : cards) {
+      cardsString += card.getAsString() + "\n";
+    }
+
+    return cardsString;
+  }
+
 
 }
