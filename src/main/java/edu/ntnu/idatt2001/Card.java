@@ -1,7 +1,5 @@
 package edu.ntnu.idatt2001;
 
-import java.net.URI;
-import java.net.URL;
 
 /**
  * A class representing a card.
@@ -26,7 +24,7 @@ public class Card {
     this.face = face;
 
     String filename = suit.name() + face.name() + ".png";
-    url = "src/main/resources/PlayingCards" + filename;
+    url = "src/main/resources/PlayingCards/" + filename;
   }
 
   /**
@@ -57,7 +55,17 @@ public class Card {
    *
    * @return the face of the card
    */
-  public String getFace() {
-    return face.name();
+  public Enum getFace() {
+    return face;
+  }
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    Card card = (Card) o;
+
+    if (suit != card.suit) return false;
+    return face == card.face;
   }
 }
